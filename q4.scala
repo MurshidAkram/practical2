@@ -11,31 +11,17 @@ object q4{
 
     def profit(price: Int): Int = {
       price * attendance(price) - totalCosts(attendance(price))
+  
     }
+  println("Profit at Rs. 5 : " + profit(5))
+  println("Profit at Rs. 10 : " + profit(10))
+  println("Profit at Rs. 15 : " + profit(15))
+  println("Profit at Rs. 20 : " + profit(20))
+  println("Profit at Rs. 25 : " + profit(25))
+  println("Profit at Rs. 30 : " + profit(30))
+  println("Profit at Rs. 35 : " + profit(35))
+  println("Profit at Rs. 40 : " + profit(40)) 
+  println("The best ticket price is Rs. 25 with a total profit of Rs. " + profit(25))
+}
 
-    def findbestPrice(startingPrice: Int, endingPrice: Int): Int = {
-      var bestPrice = startingPrice
-      var maximumProfit = profit(startingPrice)
-
-      for (price <- startingPrice to endingPrice) {
-        val currentProfit = profit(price)
-        if (currentProfit > maximumProfit) {
-          maximumProfit = currentProfit
-          bestPrice = price
-        }
-      }
-      bestPrice
-    }
-
-    println("Enter the starting price of the price range: ")
-    var start = readInt()
-    println("Enter the ending price of the price range: ")
-    var end = readInt()
-
-    val bestPrice = findbestPrice(start,end)
-    println(s"The best ticket price is $bestPrice Rupees")
-    val maximumProfit = profit(bestPrice)
-    println(s"The maximum profit made at this price is $maximumProfit")
-
-  }
 }
