@@ -2,15 +2,11 @@ import scala.io.StdIn.readInt
 
 object q4{
   def main(args: Array[String]): Unit = {
-    val basePrice = 15
-    val baseAttendance = 120
-    val performanceCost = 500
-
     def totalCosts(attendance: Int): Int = {
-      performanceCost + attendance * 3
+      500 + attendance * 3
     }
     def attendance(price: Int): Int = {
-      baseAttendance + (basePrice - price) * 20 / 5
+      120 + (15 - price) * 20 / 5
     }
 
     def profit(price: Int): Int = {
